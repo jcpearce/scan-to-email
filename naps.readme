@@ -1,0 +1,9 @@
+There is another implementation besides morena as it was no longer being updated and continued hang problems using naps2 https://www.naps2.com
+
+Scripts that exist
+
+Commands are
+ envelopeFlatScreenCommand = "";
+ documentFlatScreenCommand = "";
+ adfSimplexCommand="";
+ adfDuplexCommand="";

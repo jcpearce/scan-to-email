@@ -1,0 +1,16 @@
+The application uses a FUJITSU scanner to scan mail
+The mail is either just the surface or the surface and using the ADF the contents
+After scanning the mail is inserted into the database and emailed to the client
+
+The software flows as follows
+
+- Initially OSIScan is called. It loads FXMLDocument.fxml
+- FXMLDocumentController is launched. This handles user interactions. It creates an object ScanState that has all the information needed to handle a scan independently, who it is for, what type etc.. This is then passed to a ScanFXThread Thread object which is then run. The fxmlDocument is cleared and control go back to the user. The scanning and processing happens in background threads. It creates a unique id for the job which is a concationation of membernumber and system current time ms
+- ScanFXThread extends Task<ScanState> which (I believe) is needed to run in the background with javafx threads. Once in it it starts runlater (?) In ScanState which this thread extends it has a ScanHelper object which handles the actual scanning.
+  After scanning
+  if contents is being scanned as well  
+   it finishes the surface scan and then calls MailItemInsertThread to insert into the database and saves the usage to the database including the number of pages
+  it then calls AfterScanThread
+  If surface is called
+  it scans and then called mailiteminsert thread
+  and scanGmailEnvelope thread
