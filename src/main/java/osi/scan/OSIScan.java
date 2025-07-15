@@ -55,12 +55,9 @@ public class OSIScan extends Application {
         stage.setScene(scene);
         stage.getProperties().put("hostServices", hostServices);
         // System.out.println("Wrote local file");
-        String scanMethod = System.getenv("SCANMETHOD");
-        if (scanMethod.toLowerCase().equals("shell")) {
-            version = version + "SHL";
-        } else {
-            version = version = "MOR";
-        }
+
+        version = version + "SHL";
+
         String deb = ConfigHandler.getEntry("DebugScanApplication");
 
         if (deb.contains("yes")) {
