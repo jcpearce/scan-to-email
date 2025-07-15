@@ -126,16 +126,16 @@ public class ScanShellHelper {
             DebugLog.logEvent(MethodHandles.lookup().lookupClass(), DebugLog.INFO, "Shell scanning just surface");
             // Just scan the surface
             String profileName = "main";
-            commands = new String[]{scriptPath, "sane", "glass", id + ".jpg"};
+            commands = new String[]{scriptPath,  "glass", "color",id + ".jpg"};
 
 
         } else {
             //naps2.console.exe -d "Your Scanner Name" --adf --output "C:\path\to\save\page_%d.jpg" --image-output jpeg
             DebugLog.logEvent(MethodHandles.lookup().lookupClass(), DebugLog.INFO, "Shell scanning with ADF");
             if (duplexMode) {
-                commands = new String[]{scriptPath, "sane", "duplex", id + ".jpg"};
+                commands = new String[]{scriptPath,  "duplex", "color", id + ".jpg"};
             } else {
-                commands = new String[]{scriptPath, "sane", "feeder", id + ".jpg"};
+                commands = new String[]{scriptPath,  "feeder", "color", id + ".jpg"};
             }
 
         }
