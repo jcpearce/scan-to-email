@@ -19,7 +19,7 @@ public class ScanShellHelper {
     private int numberofpages;   // number of pages that have been scanned for billing purposes
     private boolean duplex = false;
     private boolean largeenvelope = false;
-    private String shellScanCommand = "naps-scan.bat";
+    private String shellScanCommand = "naps-scan.sh";
     //  private String shellScanCommand = "naps-scan.bat";
     private ScanState scanState;
     private static String tmpDir;
@@ -126,16 +126,16 @@ public class ScanShellHelper {
             DebugLog.logEvent(MethodHandles.lookup().lookupClass(), DebugLog.INFO, "Shell scanning just surface");
             // Just scan the surface
             String profileName = "main";
-            commands = new String[]{scriptPath, "wia", "glass", id + ".jpg"};
+            commands = new String[]{scriptPath, "sane", "glass", id + ".jpg"};
 
 
         } else {
             //naps2.console.exe -d "Your Scanner Name" --adf --output "C:\path\to\save\page_%d.jpg" --image-output jpeg
             DebugLog.logEvent(MethodHandles.lookup().lookupClass(), DebugLog.INFO, "Shell scanning with ADF");
             if (duplexMode) {
-                commands = new String[]{scriptPath, "wia", "duplex", id + ".jpg"};
+                commands = new String[]{scriptPath, "sane", "duplex", id + ".jpg"};
             } else {
-                commands = new String[]{scriptPath, "wia", "feeder", id + ".jpg"};
+                commands = new String[]{scriptPath, "sane", "feeder", id + ".jpg"};
             }
 
         }
