@@ -20,7 +20,7 @@ public class ScanException extends Exception {
     private void executeShowWarning(String message) {
         try {
             String currentWorkingDir = System.getProperty("user.dir");
-            String script = currentWorkingDir + File.separator+  "show-warning.bat \""+message+"\"";
+            String script = currentWorkingDir + File.separator+  "show-warning.sh \""+message+"\"";
             DebugLog.logEvent(MethodHandles.lookup().lookupClass(),DebugLog.ERROR,"sending to vbs error: "+script);
             Runtime.getRuntime().exec(script);
         } catch (IOException e) {

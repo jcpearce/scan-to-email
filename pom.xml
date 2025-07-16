@@ -135,19 +135,31 @@
             <version>2.9.0</version>
             <type>jar</type>
         </dependency>
+        <!-- Jakarta Mail API (just interfaces) -->
         <dependency>
             <groupId>jakarta.mail</groupId>
             <artifactId>jakarta.mail-api</artifactId>
             <version>2.1.3</version>
         </dependency>
+
+        <!-- Jakarta Activation API -->
         <dependency>
-            <groupId>com.sun.activation</groupId>
-            <artifactId>jakarta.activation</artifactId>
-            <version>2.0.1</version>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>2.1.1</version>
         </dependency>
+
+        <!-- Angus Mail Implementation (Jakarta Mail) -->
         <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>jakarta.mail</artifactId>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>angus-mail</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+
+        <!-- Angus Activation Implementation (Jakarta Activation) -->
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>angus-activation</artifactId>
             <version>2.0.1</version>
         </dependency>
         <dependency>

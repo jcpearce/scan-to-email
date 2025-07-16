@@ -246,10 +246,10 @@ public class ScanUtilities {
         boolean windows = false;
         if (StringUtils.contains(os, "Linux")) {
             windows = false;
-            command = launchDirectory + "/unix-ocr-to-txt.sh";
+            command = launchDirectory + "/mac-ocr-file-to-txt.sh";
         } else {
             windows = true;
-            command = launchDirectory + "/win-ocr-file-to-txt.bat";
+            command = launchDirectory + "/mac-ocr-file-to-txt.sh";
         }
         Process p = ScanUtilities.executeCommands(command, fullpathnameImageFile);
         String textReturned = "";

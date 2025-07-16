@@ -23,7 +23,7 @@ import java.util.Date;
 public class OSIScan extends Application {
 
     private static HostServices hostServices;
-    private String version = "3.81";
+    private String version = "3.9";
     private static boolean debug = false;
 
     @Override
